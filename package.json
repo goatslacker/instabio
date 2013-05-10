@@ -1,0 +1,22 @@
+{
+  "name": "instabio",
+  "version": "0.0.0",
+  "description": "generate instagram biographies",
+  "main": "instabio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goatslacker/instabio"
+  },
+  "keywords": [
+    "instagram",
+    "ig",
+    "bio",
+    "biography",
+    "spam"
+  ],
+  "author": "Josh Perez",
+  "license": "MIT"
+}
