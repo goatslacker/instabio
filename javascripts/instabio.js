@@ -1,4 +1,4 @@
-(function () {
+(function (exports) {
   var whoIAm = [
     'reader'
   , 'writer'
@@ -87,15 +87,21 @@
   }
 
   function getrand(topic) {
-    return topic.sort(randomishSort)[0]
+    return topic.sort(randomishSort).shift()
   }
 
   function instabio() {
+    var _descriptor = descriptor.slice(0)
+    var _reallyCoolThing = reallyCoolThing.slice(0)
+    var _secondaryDescriptor = secondaryDescriptor.slice(0)
+    var _whoIAm = whoIAm.slice(0)
+    var _additionally = additionally.concat(whoIAm, cuteQuotes)
+
     return [
-      [descriptor, reallyCoolThing, secondaryDescriptor],
-      [descriptor, whoIAm],
-      [descriptor, reallyCoolThing, secondaryDescriptor],
-      [additionally.concat(whoIAm, cuteQuotes)]
+      [_descriptor, _reallyCoolThing, _secondaryDescriptor],
+      [_descriptor, _whoIAm],
+      [_descriptor, _reallyCoolThing, _secondaryDescriptor],
+      [_additionally]
     ]
     .map(function (sentence) {
       return capitalize(sentence.map(getrand).join(' '))
@@ -104,5 +110,9 @@
     .join('. ')
   }
 
-  window.instabio = instabio
-}());
+  if (typeof module !== 'undefined') {
+    module.exports = instabio
+  } else {
+    exports.instabio = instabio
+  }
+}(this));
