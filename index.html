@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/respond.js"></script>
+    <script src="javascripts/instabio.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -47,6 +48,12 @@
 <p>Having a hip instagram bio is all the rage these days, so join in on the fun
 and generate one for yourself.</p>
 
+<h2>Try it out</h2>
+
+<div class="button" onclick="gen()">Show me the money!</div>
+
+<blockquote id="instabio"></blockquote>
+
 <h2>License</h2>
 
 <p><a href="http://josh.mit-license.org">MIT</a></p>
@@ -54,6 +61,10 @@ and generate one for yourself.</p>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
   </body>
+  <script>
+    function gen() { document.getElementById('instabio').innerHTML = instabio() }
+    gen()
+  </script>
 </html>
